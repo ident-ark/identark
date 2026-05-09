@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<script>
+(function(){
+  var saved;
+  try { saved = localStorage.getItem('identark-theme'); } catch(e){}
+  document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | IdentArk</title>
+<meta name="description" content="Book a free IAM assessment with IdentArk. Tell us about your environment and we'll map your identity security gaps.">
+<meta property="og:title" content="Contact | IdentArk">
+<meta property="og:description" content="Book a free IAM assessment with IdentArk. Tell us about your environment and we'll map your identity security gaps.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.page-hero { padding: var(--space-32) 0 var(--space-20); text-align: center; }
+.page-hero .section-label { display: inline-block; margin-bottom: var(--space-4); }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: var(--space-6); }
+.page-hero p { font-size: var(--text-lg); color: var(--color-text-muted); max-width: 56ch; margin: 0 auto var(--space-10); }
+.breadcrumb { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-8); justify-content: center; }
+.breadcrumb a { color: var(--color-primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb-sep { opacity: 0.4; }
+.nav__link.active { color: var(--color-primary); }
+</style>
+</head>
+<body>
+
+<a href="#main" class="sr-only">Skip to content</a>
+
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="../" class="logo" aria-label="IdentArk home">
+        <img src="../logo.jpeg" alt="IdentArk Logo" class="logo__img" width="44" height="44" loading="eager">
+        <span class="logo__text">Ident<span class="accent">Ark</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="../index.html#services" class="nav__link">Services</a></li>
+          <li><a href="../industries/" class="nav__link">Industries</a></li>
+          <li><a href="../index.html#dpdp" class="nav__link">DPDP</a></li>
+          <li><a href="../index.html#process" class="nav__link">Process</a></li>
+          <li><a href="../about/" class="nav__link">About</a></li>
+          <li><a href="../contact/" class="nav__link active">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="../contact/" class="btn btn-primary btn-sm">Book a Call</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul role="list">
+      <li><a href="../index.html#services" class="nav__link">Services</a></li>
+      <li><a href="../industries/" class="nav__link">Industries</a></li>
+      <li><a href="../index.html#dpdp" class="nav__link">DPDP</a></li>
+      <li><a href="../index.html#process" class="nav__link">Process</a></li>
+      <li><a href="../about/" class="nav__link">About</a></li>
+      <li><a href="../contact/" class="nav__link">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero section-padding">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Contact</span>
+      </nav>
+      <span class="section-label reveal">Get in Touch</span>
+      <h1 class="reveal">Let’s Talk Identity</h1>
+      <div class="reveal" style="margin:var(--space-6) auto 0;text-align:center;display:flex;justify-content:center;">
+        <img src="../logo.jpeg" alt="IdentArk" width="140" height="140" loading="eager" style="width:140px;height:140px;object-fit:contain;border-radius:14px;">
+      </div>
+      <p class="reveal">Tell us about your environment. We’ll map the gaps, prioritise the risks, and show you exactly what a fix looks like — no commitment required.</p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact__layout">
+
+        <div class="contact__info reveal">
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact__item-label">Email</div>
+              <div class="contact__item-value"><a href="mailto:Identark@outlook.com" style="color:var(--color-primary)">Identark@outlook.com</a></div>
+            </div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact__item-label">LinkedIn</div>
+              <div class="contact__item-value"><a href="https://www.linkedin.com/company/116654145/" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary)">IdentArk on LinkedIn</a></div>
+            </div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="contact__item-label">Response Time</div>
+              <div class="contact__item-value">Within 24 hours on business days</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__form-wrap reveal">
+          <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <input type="hidden" name="access_key" value="4bf491ee-0554-4fe6-982c-70b736e5435b" />
+            <input type="hidden" name="subject" value="New IdentArk Assessment Request" />
+            <input type="hidden" name="from_name" value="IdentArk Website" />
+            <input type="checkbox" name="botcheck" style="display:none" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Rahul Sharma" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Work Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="rahul@company.in" required autocomplete="email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="company" class="form-label">Company</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Acme Fintech Pvt Ltd" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label for="size" class="form-label">Company Size</label>
+                <select id="size" name="size" class="form-input">
+                  <option value="">Select size</option>
+                  <option>1–50 employees</option>
+                  <option>51–200 employees</option>
+                  <option>201–500 employees</option>
+                  <option>500+ employees</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="interest" class="form-label">Primary Interest</label>
+              <select id="interest" name="interest" class="form-input">
+                <option value="">What are you looking to solve?</option>
+                <option>Identity & Access Management (IAM)</option>
+                <option>Privileged Access Management (PAM)</option>
+                <option>Identity Governance & Administration (IGA)</option>
+                <option>DPDP Act Readiness</option>
+                <option>SSO & Federation</option>
+                <option>Cloud Migration</option>
+                <option>Access Reviews & SoD</option>
+                <option>Not sure — need an assessment</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Tell us about your environment</label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Current IAM tools, number of users, key pain points, compliance requirements..." rows="5"></textarea>
+            </div>
+            <div id="form-status" style="display:none;padding:var(--space-4);border-radius:var(--radius-md);margin-bottom:var(--space-4);font-size:var(--text-sm);"></div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;gap:0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Send & Book Assessment
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="../" class="logo" aria-label="IdentArk home">
+          <img src="../logo.jpeg" alt="IdentArk Logo" class="logo__img" width="36" height="36" loading="lazy">
+          <span class="logo__text">Ident<span class="accent">Ark</span></span>
+        </a>
+        <p class="footer__tagline">India’s boutique IAM partner. Enterprise-grade identity security for SMBs.</p>
+      </div>
+      <div class="footer__links">
+        <a href="../industries/" class="footer__link">Industries</a>
+        <a href="../about/" class="footer__link">About</a>
+        <a href="../contact/" class="footer__link">Contact</a>
+        <a href="https://www.linkedin.com/company/116654145/" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 IdentArk. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Theme
+  var t = document.querySelector('[data-theme-toggle]');
+  var r = document.documentElement;
+  var d = 'light';
+  try { if(localStorage.getItem('identark-theme')==='dark') d='dark'; } catch(e){}
+  r.setAttribute('data-theme', d);
+  if(t) t.addEventListener('click', function(){
+    d = d==='dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', d);
+    try { localStorage.setItem('identark-theme', d); } catch(e){}
+  });
+
+  // Mobile nav — .is-open matches style.css
+  var mb = document.querySelector('.mobile-menu-btn');
+  var mn = document.getElementById('mobileNav');
+  if(mb && mn) mb.addEventListener('click', function(){
+    var open = mn.classList.toggle('is-open');
+    mb.setAttribute('aria-expanded', open);
+    mn.setAttribute('aria-hidden', !open);
+  });
+
+  // Scroll reveal — .in-view matches style.css rule .reveal.in-view
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          obs.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+<script>
+async function handleFormSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  var status = document.getElementById('form-status');
+  var btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.style.display = 'none';
+  try {
+    var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) });
+    var json = await res.json();
+    if (json.success) {
+      status.style.display = 'block';
+      status.style.background = 'rgba(59,158,202,0.1)';
+      status.style.color = 'var(--color-primary)';
+      status.textContent = '\u2713 Message sent. We\'ll be in touch within 24 hours.';
+      form.reset();
+    } else { throw new Error(json.message); }
+  } catch(err) {
+    status.style.display = 'block';
+    status.style.background = 'rgba(220,50,50,0.1)';
+    status.style.color = '#f87171';
+    status.textContent = '\u2717 Something went wrong. Email us at Identark@outlook.com';
+  }
+  btn.disabled = false;
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Send & Book Assessment';
+}
+</script>
+</body>
+</html>

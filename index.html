@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<script>
+(function(){
+  var saved;
+  try { saved = localStorage.getItem('identark-theme'); } catch(e){}
+  // Only go dark if user explicitly chose dark before. Otherwise always light.
+  document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
+})();
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IdentArk — IAM, PAM & DPDP Readiness for Indian SMBs</title>
+  <meta name="description" content="IdentArk is India's boutique IAM consultancy helping SMBs implement Identity & Access Management, Privileged Access Management, Identity Governance, and DPDP compliance." />
+  <meta property="og:title" content="IdentArk — Identity Security for Indian SMBs" />
+  <meta property="og:description" content="IAM · PAM · IGA · DPDP Readiness. Purpose-built for India's growing SMB sector." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SKIP LINK -->
+<a href="#main" class="sr-only">Skip to content</a>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="#" class="logo" aria-label="IdentArk home">
+        <img src="./logo.jpeg" alt="IdentArk Logo" class="logo__img" width="44" height="44" loading="eager">
+        <span class="logo__text">Ident<span class="accent">Ark</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__links" role="list">
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="./industries/" class="nav__link">Industries</a></li>
+          <li><a href="#dpdp" class="nav__link">DPDP</a></li>
+          <li><a href="#process" class="nav__link">Process</a></li>
+          <li><a href="./about/" class="nav__link">About</a></li>
+          <li><a href="./contact/" class="nav__link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.25rem;">
+          Book a Call
+        </a>
+      </nav>
+
+      <button class="mobile-menu-btn" aria-label="Open navigation" aria-expanded="false" id="mobileMenuBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#services" class="nav__link">Services</a>
+      <a href="./industries/" class="nav__link">Industries</a>
+      <a href="#dpdp" class="nav__link">DPDP</a>
+      <a href="#process" class="nav__link">Process</a>
+      <a href="./about/" class="nav__link">About</a>
+      <a href="./contact/" class="nav__link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero__bg"></div>
+  <div class="hero__bg-grid" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__left">
+        <span class="hero__eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          India's Boutique IAM Partner
+        </span>
+        <h1 class="hero__title">
+          Secure Identity.<br/>
+          <span class="highlight">Govern Access.</span><br/>
+          Stay Compliant.
+        </h1>
+        <p class="hero__desc">
+          IdentArk delivers enterprise-grade IAM, PAM, and Identity Governance to India's SMBs — without the enterprise price tag or the consultant-by-the-hour model.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Book a Free Assessment
+          </a>
+          <a href="#services" class="btn btn-primary">
+            Explore Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero__trust">
+          <p class="hero__trust-label">Built on proven platforms</p>
+          <div class="hero__trust-badges">
+            <span class="trust-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              SailPoint IIQ
+            </span>
+            <span class="trust-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Microsoft Entra ID
+            </span>
+            <span class="trust-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Okta
+            </span>
+            <span class="trust-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              CyberArk
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__logo-display">
+          <img src="./logo.jpeg" alt="IdentArk" width="220" height="220" loading="eager" style="width:220px;height:220px;object-fit:contain;border-radius:16px;mix-blend-mode:screen;filter:brightness(1.3) contrast(1.1);display:block;margin-bottom:var(--space-4);">
+        </div>
+        <div class="hero__card">
+          <p class="hero__card-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934a8 8 0 1 0-.353 2.219"/></svg>
+            Core Capabilities
+          </p>
+          <div class="service-pills">
+            <span class="service-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Identity & Access Mgmt
+            </span>
+            <span class="service-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Privileged Access (PAM)
+            </span>
+            <span class="service-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Identity Governance (IGA)
+            </span>
+            <span class="service-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              DPDP Readiness
+            </span>
+            <span class="service-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg>
+              SSO & Federation
+            </span>
+            <span class="service-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              Cloud Migration
+            </span>
+          </div>
+        </div>
+        <div class="hero__stat-row">
+          <div class="hero__stat">
+            <div class="hero__stat-val">100%</div>
+            <div class="hero__stat-lbl">SMB Focus</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-val">DPDP</div>
+            <div class="hero__stat-lbl">Act Ready</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-val">India</div>
+            <div class="hero__stat-lbl">Based & Built</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats" aria-label="Key metrics">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stat reveal">
+        <div class="stat__value">50M+</div>
+        <div class="stat__label">Indian SMBs needing IAM</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__value">₹250Cr</div>
+        <div class="stat__label">Average breach cost in India</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__value">DPDP</div>
+        <div class="stat__label">Act compliance mandatory</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat__value">72hrs</div>
+        <div class="stat__label">Breach notification window</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-padding reveal" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="services__header">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title" id="services-heading">Identity Security,<br/>End to End</h2>
+      <p class="section-desc">From initial access provisioning to privileged session recording, IdentArk covers the full identity stack — deployed, configured, and handed over as a working solution.</p>
+    </div>
+    <div class="services__layout">
+      <div class="services__list">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <h3 class="service-card__title">Identity & Access Management (IAM)</h3>
+            <p class="service-card__desc">Lifecycle management for joiners, movers, leavers. Automated provisioning and deprovisioning across AD, SaaS, and on-prem apps via SailPoint IIQ, Entra ID, or Okta.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div>
+            <h3 class="service-card__title">Privileged Access Management (PAM)</h3>
+            <p class="service-card__desc">Vault admin credentials, record privileged sessions, enforce just-in-time access. CyberArk and open-source PAM implementations for SMB budgets.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div>
+            <h3 class="service-card__title">Identity Governance & Administration (IGA)</h3>
+            <p class="service-card__desc">Role engineering, access certifications, SOD policy enforcement. Turn manual access reviews into automated governance cycles that satisfy auditors.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg>
+          </div>
+          <div>
+            <h3 class="service-card__title">SSO & Federation</h3>
+            <p class="service-card__desc">SAML 2.0, OAuth 2.0, and OIDC integrations across your application estate. One login, enforced MFA, zero password sprawl.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div>
+            <h3 class="service-card__title">Cloud IAM Migration</h3>
+            <p class="service-card__desc">Move from on-prem AD or legacy IDM to Entra ID, SailPoint Cloud, or Okta. Parallel-run migrations with zero identity downtime.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="services__visual">
+        <div class="services__visual-panel">
+          <div>
+            <h3>Compliance Coverage</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-2)">Frameworks IdentArk implementations align to</p>
+          </div>
+          <div class="compliance-badges">
+            <span class="compliance-badge">DPDP Act 2023</span>
+            <span class="compliance-badge accent">ISO 27001</span>
+            <span class="compliance-badge">SOC 2 Type II</span>
+            <span class="compliance-badge accent">SEBI CSCRF</span>
+            <span class="compliance-badge">RBI IT Framework</span>
+            <span class="compliance-badge accent">NIST CSF</span>
+            <span class="compliance-badge">IRDAI Guidelines</span>
+          </div>
+          <div>
+            <p style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-faint);margin-bottom:var(--space-4)">Typical Delivery Stack</p>
+            <div class="arch-stack">
+              <div class="arch-item">
+                <span class="arch-item__label">IDM Platform</span>
+                <span class="arch-item__value">SailPoint IIQ / Entra ID</span>
+              </div>
+              <div class="arch-item">
+                <span class="arch-item__label">PAM</span>
+                <span class="arch-item__value">CyberArk / BeyondTrust</span>
+              </div>
+              <div class="arch-item">
+                <span class="arch-item__label">Directory</span>
+                <span class="arch-item__value">Active Directory / LDAP</span>
+              </div>
+              <div class="arch-item">
+                <span class="arch-item__label">SSO</span>
+                <span class="arch-item__value">Okta / Entra External ID</span>
+              </div>
+              <div class="arch-item">
+                <span class="arch-item__label">Provisioning</span>
+                <span class="arch-item__value">SCIM 2.0 / REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section id="verticals" class="verticals section-padding" aria-labelledby="verticals-heading">
+  <div class="container">
+    <span class="section-label reveal">Industries We Serve</span>
+    <h2 class="section-title reveal" id="verticals-heading">India's SMB Sector,<br/>Secured by Design</h2>
+    <p class="section-desc reveal">Every industry has a different compliance baseline and threat model. IdentArk brings pre-built playbooks for each vertical so delivery starts on day one, not month three.</p>
+    <div class="verticals__grid">
+      <div class="vertical-card reveal">
+        <div class="vertical-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="vertical-card__name">BFSI & Fintech</h3>
+        <p class="vertical-card__desc">RBI IT Framework, SEBI CSCRF, and DPDP-aligned identity controls. Privileged access over core banking, maker-checker workflows, and fraud-resistant MFA.</p>
+      </div>
+      <div class="vertical-card reveal">
+        <div class="vertical-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="vertical-card__name">Healthcare</h3>
+        <p class="vertical-card__desc">DPDP health data classification, role-based access to patient records, and audit trails for clinical staff. Keep PHI protected without slowing down care delivery.</p>
+      </div>
+      <div class="vertical-card reveal">
+        <div class="vertical-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3 class="vertical-card__name">EdTech</h3>
+        <p class="vertical-card__desc">Student and staff identity lifecycle, secure LMS access, and DPDP compliance for institutions handling minors' data. SSO across learning platforms.</p>
+      </div>
+      <div class="vertical-card reveal">
+        <div class="vertical-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="vertical-card__name">IT/SaaS Companies</h3>
+        <p class="vertical-card__desc">Developer identity governance, privileged access to production environments, and automated provisioning into GitHub, Jira, AWS, and Azure from a single IGA platform.</p>
+      </div>
+      <div class="vertical-card reveal">
+        <div class="vertical-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="vertical-card__name">GIFT City & IFSCs</h3>
+        <p class="vertical-card__desc">IFSCA-ready identity frameworks for financial services operating from GIFT City. Cross-border identity federation and regulatory audit-readiness built in.</p>
+      </div>
+      <div class="vertical-card reveal">
+        <div class="vertical-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 class="vertical-card__name">Manufacturing & Industry</h3>
+        <p class="vertical-card__desc">OT/IT identity convergence, vendor and contractor access management, and shop-floor privileged access controls for Industry 4.0 environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DPDP SECTION -->
+<section id="dpdp" class="section-padding" aria-labelledby="dpdp-heading">
+  <div class="container">
+    <div class="dpdp__layout">
+      <div class="dpdp__text reveal">
+        <span class="section-label">DPDP Act 2023</span>
+        <h2 class="section-title" id="dpdp-heading">India's Data Privacy Law<br/>Starts with Identity</h2>
+        <p>The Digital Personal Data Protection Act 2023 imposes strict obligations on how organisations collect, process, and store personal data. Non-compliance carries penalties up to ₹250 crore — and IAM is the enforcement layer that makes compliance operationally real.</p>
+        <p>IdentArk maps your identity architecture to DPDP requirements: purpose limitation, data principal rights, consent management, and breach notification — all tied back to who has access to what data and when.</p>
+        <div class="dpdp__pillars">
+          <div class="dpdp__pillar">
+            <h4>Data Minimisation</h4>
+            <p>Access scoped to minimum necessary data. Role-based controls enforced at the identity layer.</p>
+          </div>
+          <div class="dpdp__pillar">
+            <h4>Consent Linkage</h4>
+            <p>Identity tokens carry consent context, ensuring processing only happens when consent is valid.</p>
+          </div>
+          <div class="dpdp__pillar">
+            <h4>Right to Erasure</h4>
+            <p>Automated deprovisioning workflows triggered by consent withdrawal or data deletion requests.</p>
+          </div>
+          <div class="dpdp__pillar">
+            <h4>Breach Notification</h4>
+            <p>Identity audit trails provide the access forensics needed for 72-hour breach reporting.</p>
+          </div>
+        </div>
+      </div>
+      <div class="dpdp__visual reveal">
+        <p style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-faint);margin-bottom:var(--space-6)">DPDP Readiness Journey</p>
+        <div class="dpdp__timeline">
+          <div class="dpdp__step">
+            <div class="dpdp__step-num">1</div>
+            <div>
+              <div class="dpdp__step-title">Data & Identity Mapping</div>
+              <p class="dpdp__step-desc">Discover all personal data stores, map access paths, and identify who can reach which data through which identity.</p>
+            </div>
+          </div>
+          <div class="dpdp__step">
+            <div class="dpdp__step-num">2</div>
+            <div>
+              <div class="dpdp__step-title">Gap Assessment</div>
+              <p class="dpdp__step-desc">Benchmark current IAM controls against DPDP obligations. Produce a prioritised remediation backlog with effort estimates.</p>
+            </div>
+          </div>
+          <div class="dpdp__step">
+            <div class="dpdp__step-num">3</div>
+            <div>
+              <div class="dpdp__step-title">Control Implementation</div>
+              <p class="dpdp__step-desc">Deploy access controls, consent linkage, and data subject rights workflows. Automate what regulators expect to be repeatable.</p>
+            </div>
+          </div>
+          <div class="dpdp__step">
+            <div class="dpdp__step-num">4</div>
+            <div>
+              <div class="dpdp__step-title">Audit Readiness Package</div>
+              <p class="dpdp__step-desc">Deliver documented policies, access reports, and evidence packs ready for a Data Protection Board inquiry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section-padding" style="background:var(--color-bg-alt)" aria-labelledby="process-heading">
+  <div class="container">
+    <span class="section-label reveal">How We Work</span>
+    <h2 class="section-title reveal" id="process-heading">From Discovery to Live —<br/>In Weeks, Not Quarters</h2>
+    <p class="section-desc reveal">A fixed, phased methodology that keeps scope clear and delivery predictable. No open-ended retainers, no surprise extensions.</p>
+    <div class="process__steps">
+      <div class="step reveal">
+        <div class="step__number">01</div>
+        <h3 class="step__title">Discovery & Assessment</h3>
+        <p class="step__desc">Two-week deep dive into your current identity landscape. Map every application, every access path, every identity store. Output: a prioritised risk report with a clear delivery roadmap.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__number">02</div>
+        <h3 class="step__title">Design & Architecture</h3>
+        <p class="step__desc">Platform selection, architecture decisions, and connector design locked down before a single line of config is written. Stakeholder sign-off before build starts.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__number">03</div>
+        <h3 class="step__title">Build & Configure</h3>
+        <p class="step__desc">Hands-on implementation. Lifecycle workflows, role models, PAM vaults, SSO integrations, access certifications. Everything tested in staging before production cutover.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__number">04</div>
+        <h3 class="step__title">Handover & Support</h3>
+        <p class="step__desc">Full documentation, admin training, and a hypercare period. Ongoing managed services available for organisations that want IdentArk to run the platform post-launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-padding reveal" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about__layout">
+      <div>
+        <span class="section-label">About IdentArk</span>
+        <h2 class="section-title" id="about-heading">Built by Practitioners,<br/>Not Generalists</h2>
+        <p class="about__text">IdentArk was founded on a simple observation: Indian SMBs were either buying enterprise IAM platforms they couldn't operate, or ignoring identity security entirely and waiting for a breach to force the conversation.</p>
+        <p class="about__text">We exist between those two failure modes. Our team has hands-on delivery experience with SailPoint Identity IQ, Microsoft Entra ID, Okta, and Active Directory across BFSI, healthcare, and technology verticals. We deploy, configure, and hand over working systems — not slide decks.</p>
+        <p class="about__text">Founded and operating from India, with deep awareness of the DPDP Act, RBI IT Framework, and SEBI CSCRF requirements that Indian businesses actually face.</p>
+        <div class="about__skills">
+          <span class="skill-tag">SailPoint IIQ</span>
+          <span class="skill-tag">Microsoft Entra ID</span>
+          <span class="skill-tag">Okta</span>
+          <span class="skill-tag">Active Directory</span>
+          <span class="skill-tag">CyberArk</span>
+          <span class="skill-tag">SCIM 2.0</span>
+          <span class="skill-tag">SAML / OIDC</span>
+          <span class="skill-tag">PowerShell</span>
+          <span class="skill-tag">SOD Policy</span>
+          <span class="skill-tag">Access Certification</span>
+          <span class="skill-tag">DPDP Act</span>
+          <span class="skill-tag">ISO 27001</span>
+        </div>
+      </div>
+      <div class="about__visual">
+        <div class="founder-card">
+          <div class="founder-avatar">KP</div>
+          <div class="founder-info">
+            <h4>Keyur Purohit</h4>
+            <p>Founder & Principal IAM Architect</p>
+          </div>
+        </div>
+        <p class="founder-bio">IAM engineer and architect with hands-on experience deploying SailPoint IIQ, configuring SCIM provisioning workflows, implementing SOD policies, and building SSO integrations between Entra ID and enterprise applications. Previously worked across enterprise identity projects in India and Australia.</p>
+        <div class="about__skills" style="margin-top:0">
+          <span class="skill-tag">10+ yrs IAM delivery</span>
+          <span class="skill-tag">Melbourne → India</span>
+          <span class="skill-tag">GIFT City focused</span>
+        </div>
+        <div style="margin-top:var(--space-6);padding-top:var(--space-6);border-top:1px solid var(--color-border)">
+          <p style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-faint);margin-bottom:var(--space-4)">Why IdentArk</p>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Fixed-scope delivery — no hourly billing surprises
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Hands-on engineers, not project managers
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Indian regulatory context built into every design
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              SMB pricing, enterprise delivery quality
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact section-padding" style="background:var(--color-bg-alt)" aria-labelledby="contact-heading">
+  <div class="container">
+    <span class="section-label reveal">Get in Touch</span>
+    <h2 class="section-title reveal" id="contact-heading">Start with a Free<br/>Identity Assessment</h2>
+    <p class="section-desc reveal" style="margin-bottom:var(--space-12)">Tell us about your environment. We'll map the gaps, prioritise the risks, and show you exactly what a fix looks like — no commitment required.</p>
+    <div class="contact__layout">
+      <div class="contact__info reveal">
+        <div class="contact__item">
+          <div class="contact__item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact__item-label">Email</div>
+            <div class="contact__item-value"><a href="mailto:Identark@outlook.com" style="color:var(--color-primary)">Identark@outlook.com</a></div>
+          </div>
+        </div>
+        <div class="contact__item">
+          <div class="contact__item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <div class="contact__item-label">LinkedIn</div>
+            <div class="contact__item-value"><a href="https://www.linkedin.com/company/116654145/" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary)">IdentArk on LinkedIn</a></div>
+          </div>
+        </div>
+        <div class="contact__item">
+          <div class="contact__item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact__item-label">Response Time</div>
+            <div class="contact__item-value">Within 24 hours on business days</div>
+          </div>
+        </div>
+        <div style="padding:var(--space-6);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg)">
+          <p style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-faint);margin-bottom:var(--space-4)">What to expect</p>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text-muted)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              30-min discovery call
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text-muted)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Identity risk summary (no charge)
+            </div>
+            <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);color:var(--color-text-muted)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Fixed-price proposal if you want to proceed
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact__form reveal">
+        <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:var(--text-xl);margin-bottom:var(--space-6)">Book a Free Assessment</h3>
+        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+          <input type="hidden" name="access_key" value="4bf491ee-0554-4fe6-982c-70b736e5435b" />
+          <input type="hidden" name="subject" value="New IdentArk Assessment Request" />
+          <input type="hidden" name="from_name" value="IdentArk Website" />
+          <input type="checkbox" name="botcheck" style="display:none" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Rohan Mehta" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" name="email" placeholder="rohan@company.in" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Acme Technologies" />
+            </div>
+            <div class="form-group">
+              <label for="size">Company Size</label>
+              <select id="size" name="size">
+                <option value="">Select range</option>
+                <option>1–50 employees</option>
+                <option>51–200 employees</option>
+                <option>201–500 employees</option>
+                <option>500+ employees</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interest">Primary Interest</label>
+            <select id="interest" name="interest">
+              <option value="">What are you looking to solve?</option>
+              <option>IAM / Access Provisioning</option>
+              <option>Privileged Access Management (PAM)</option>
+              <option>Identity Governance (IGA / Certifications)</option>
+              <option>DPDP Compliance</option>
+              <option>SSO / MFA Rollout</option>
+              <option>Cloud IAM Migration</option>
+              <option>Full identity program assessment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your environment</label>
+            <textarea id="message" name="message" placeholder="Current platforms, pain points, timeline, anything relevant..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Send & Book Assessment
+          </button>
+          <p id="form-status" style="display:none;margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-md);background:oklch(from var(--color-accent) l c h / 0.1);color:var(--color-accent);font-size:var(--text-sm);text-align:center;"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo" aria-label="IdentArk home">
+          <img src="./logo.jpeg" alt="IdentArk Logo" class="logo__img" width="40" height="40" loading="lazy">
+          <span class="logo__text">Ident<span class="accent">Ark</span></span>
+        </a>
+        <p>India's boutique IAM consultancy. Identity security, governance, and DPDP compliance for growing businesses.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#services">IAM Implementation</a></li>
+          <li><a href="#services">Privileged Access (PAM)</a></li>
+          <li><a href="#services">Identity Governance</a></li>
+          <li><a href="#services">SSO & Federation</a></li>
+          <li><a href="#services">Cloud Migration</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Compliance</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#dpdp">DPDP Act 2023</a></li>
+          <li><a href="#dpdp">ISO 27001</a></li>
+          <li><a href="#dpdp">SEBI CSCRF</a></li>
+          <li><a href="#dpdp">RBI IT Framework</a></li>
+          <li><a href="#dpdp">IRDAI Guidelines</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#about">About IdentArk</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="./industries/">Industries</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 IdentArk. All rights reserved.</span>
+      <span>IAM · PAM · IGA · DPDP · India</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Theme toggle
+(function(){
+  const t = document.querySelector('[data-theme-toggle]');
+  const r = document.documentElement;
+  let d = r.getAttribute('data-theme') || 'light';
+  r.setAttribute('data-theme', d);
+  function updateIcon() {
+    if (!t) return;
+    t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+    t.innerHTML = d === 'dark'
+      ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
+  updateIcon();
+  t && t.addEventListener('click', () => { d = d === 'dark' ? 'light' : 'dark'; r.setAttribute('data-theme', d); updateIcon(); });
+})();
+
+// Header scroll state
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('header--scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// Mobile menu
+const btn = document.getElementById('mobileMenuBtn');
+const nav = document.getElementById('mobileNav');
+btn && btn.addEventListener('click', () => {
+  const open = nav.classList.toggle('is-open');
+  btn.setAttribute('aria-expanded', open);
+});
+nav && nav.addEventListener('click', e => {
+  if (e.target.classList.contains('nav__link')) {
+    nav.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Lucide icons init
+document.addEventListener('DOMContentLoaded', () => { if (window.lucide) lucide.createIcons(); });
+
+// Form submit via Web3Forms
+async function handleFormSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const status = document.getElementById('form-status');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.style.display = 'none';
+
+  try {
+    const data = new FormData(form);
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    });
+    const json = await res.json();
+    if (json.success) {
+      status.style.display = 'block';
+      status.style.background = 'oklch(from var(--color-accent) l c h / 0.1)';
+      status.style.color = 'var(--color-accent)';
+      status.textContent = '✓ Message sent. We\'ll be in touch within 24 hours.';
+      form.reset();
+    } else {
+      throw new Error(json.message);
+    }
+  } catch (err) {
+    status.style.display = 'block';
+    status.style.background = 'oklch(from var(--color-error, #c00) l c h / 0.1)';
+    status.style.color = '#e05';
+    status.textContent = '✗ Something went wrong. Email us directly at hello@identark.in';
+  }
+  btn.disabled = false;
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Send & Book Assessment';
+}
+</script>
+</body>
+</html>
