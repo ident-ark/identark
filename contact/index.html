@@ -102,7 +102,7 @@
             </div>
             <div>
               <div class="contact__item-label">Email</div>
-              <div class="contact__item-value"><a href="mailto:Identark@outlook.com" style="color:var(--color-primary)">Identark@outlook.com</a></div>
+              <div class="contact__item-value"><a href="mailto:security@identark.co.in" style="color:var(--color-primary)">security@identark.co.in</a></div>
             </div>
           </div>
           <div class="contact__item">
@@ -127,7 +127,7 @@
 
         <div class="contact__form-wrap reveal">
           <form id="contactForm" onsubmit="handleFormSubmit(event)">
-            <input type="hidden" name="access_key" value="4bf491ee-0554-4fe6-982c-70b736e5435b" />
+            <input type="hidden" name="access_key" value="b0695ec9-5406-4aea-8fee-cdc67e8df026" />
             <input type="hidden" name="subject" value="New IdentArk Assessment Request" />
             <input type="hidden" name="from_name" value="IdentArk Website" />
             <input type="checkbox" name="botcheck" style="display:none" />
@@ -260,6 +260,7 @@ async function handleFormSubmit(e) {
   btn.disabled = true;
   btn.textContent = 'Sending...';
   status.style.display = 'none';
+
   try {
     var res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) });
     var json = await res.json();
@@ -271,10 +272,21 @@ async function handleFormSubmit(e) {
       form.reset();
     } else { throw new Error(json.message); }
   } catch(err) {
+    console.error('Form submission error:', err);
+    // Fallback: open mailto link
+    var name = form.querySelector('#name').value;
+    var email = form.querySelector('#email').value;
+    var company = form.querySelector('#company').value;
+    var interest = form.querySelector('#interest').value;
+    var message = form.querySelector('#message').value;
+    
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\nCompany: ' + company + '\nInterest: ' + interest + '\n\nMessage:\n' + message;
+    window.location.href = 'mailto:security@identark.co.in?subject=New IdentArk Assessment Request&body=' + encodeURIComponent(body);
+    
     status.style.display = 'block';
-    status.style.background = 'rgba(220,50,50,0.1)';
-    status.style.color = '#f87171';
-    status.textContent = '\u2717 Something went wrong. Email us at Identark@outlook.com';
+    status.style.background = 'rgba(59,158,202,0.1)';
+    status.style.color = 'var(--color-primary)';
+    status.textContent = '\u2713 Opening email client... Please send the pre-filled message to security@identark.co.in';
   }
   btn.disabled = false;
   btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Send & Book Assessment';
