@@ -493,6 +493,19 @@
           <span class="skill-tag">Melbourne → India</span>
           <span class="skill-tag">GIFT City focused</span>
         </div>
+        <div class="founder-card" style="margin-top:var(--space-8)">
+          <div class="founder-avatar">AP</div>
+          <div class="founder-info">
+            <h4>Arpit Pattani</h4>
+            <p>DevOps Architect | Identity & Access Governance</p>
+          </div>
+        </div>
+        <p class="founder-bio">DevOps professional with experience across enterprise cloud platforms, Kubernetes, and CI/CD automation. Focused on improving access visibility, authentication hygiene, and audit readiness under evolving DPDP expectations in India.</p>
+        <div class="about__skills" style="margin-top:0">
+          <span class="skill-tag">DevOps & Cloud Platforms</span>
+          <span class="skill-tag">Kubernetes & CI/CD</span>
+          <span class="skill-tag">Access Control & DPDP</span>
+        </div>
         <div style="margin-top:var(--space-6);padding-top:var(--space-6);border-top:1px solid var(--color-border)">
           <p style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-faint);margin-bottom:var(--space-4)">Why IdentArk</p>
           <div style="display:flex;flex-direction:column;gap:var(--space-3)">
@@ -533,7 +546,7 @@
           </div>
           <div>
             <div class="contact__item-label">Email</div>
-            <div class="contact__item-value"><a href="mailto:Identark@outlook.com" style="color:var(--color-primary)">Identark@outlook.com</a></div>
+            <div class="contact__item-value"><a href="mailto:security@identark.co.in" style="color:var(--color-primary)">security@identark.co.in</a></div>
           </div>
         </div>
         <div class="contact__item">
@@ -575,7 +588,7 @@
       <div class="contact__form reveal">
         <h3 style="font-family:'Cabinet Grotesk',sans-serif;font-weight:800;font-size:var(--text-xl);margin-bottom:var(--space-6)">Book a Free Assessment</h3>
         <form id="contactForm" onsubmit="handleFormSubmit(event)">
-          <input type="hidden" name="access_key" value="4bf491ee-0554-4fe6-982c-70b736e5435b" />
+          <input type="hidden" name="access_key" value="b0695ec9-5406-4aea-8fee-cdc67e8df026" />
           <input type="hidden" name="subject" value="New IdentArk Assessment Request" />
           <input type="hidden" name="from_name" value="IdentArk Website" />
           <input type="checkbox" name="botcheck" style="display:none" />
@@ -758,10 +771,21 @@ async function handleFormSubmit(e) {
       throw new Error(json.message);
     }
   } catch (err) {
+    console.error('Form submission error:', err);
+    // Fallback: open mailto link
+    const name = form.querySelector('#name').value;
+    const email = form.querySelector('#email').value;
+    const company = form.querySelector('#company').value;
+    const interest = form.querySelector('#interest').value;
+    const message = form.querySelector('#message').value;
+    
+    const body = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nInterest: ${interest}\n\nMessage:\n${message}`;
+    window.location.href = `mailto:security@identark.co.in?subject=New IdentArk Assessment Request&body=${encodeURIComponent(body)}`;
+    
     status.style.display = 'block';
-    status.style.background = 'oklch(from var(--color-error, #c00) l c h / 0.1)';
-    status.style.color = '#e05';
-    status.textContent = '✗ Something went wrong. Email us directly at hello@identark.in';
+    status.style.background = 'oklch(from var(--color-accent) l c h / 0.1)';
+    status.style.color = 'var(--color-accent)';
+    status.textContent = '✓ Opening email client... Please send the pre-filled message to security@identark.co.in';
   }
   btn.disabled = false;
   btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Send & Book Assessment';
