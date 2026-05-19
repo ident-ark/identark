@@ -5,7 +5,6 @@
 (function(){
   var saved;
   try { saved = localStorage.getItem('identark-theme'); } catch(e){}
-  // Only go dark if user explicitly chose dark before. Otherwise always light.
   document.documentElement.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
 })();
 </script>
@@ -174,6 +173,29 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDING CLIENT PROGRAMME -->
+<section id="founding" class="founding-band" aria-labelledby="founding-heading">
+  <div class="container">
+    <div class="founding-band__inner">
+      <p class="founding-band__eyebrow">Founding Client Programme</p>
+      <h2 class="founding-band__title" id="founding-heading">10 Slots. One Per Vertical.</h2>
+      <p class="founding-band__desc">We're taking on 10 founding clients. Each gets a structured IAM gap analysis — practitioner-delivered, no cost. Spots are allocated by vertical. If yours is open, it's worth a conversation.</p>
+      <div class="founding-band__verticals">
+        <span class="founding-pill">BFSI &amp; Fintech</span>
+        <span class="founding-pill">Healthcare</span>
+        <span class="founding-pill">EdTech</span>
+        <span class="founding-pill">IT / SaaS</span>
+        <span class="founding-pill">GIFT City</span>
+        <span class="founding-pill">Manufacturing</span>
+      </div>
+      <a href="#contact" class="btn btn-primary founding-band__cta">
+        Check If Your Vertical Is Open
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -741,7 +763,7 @@ async function handleFormSubmit(e) {
       status.style.display = 'block';
       status.style.background = 'oklch(from var(--color-accent) l c h / 0.1)';
       status.style.color = 'var(--color-accent)';
-      status.textContent = '✓ Message sent. We\'ll be in touch within 24 hours.';
+      status.textContent = '\u2713 Message sent. We\'ll be in touch within 24 hours.';
       form.reset();
     } else {
       throw new Error(json.message);
@@ -760,11 +782,69 @@ async function handleFormSubmit(e) {
     status.style.display = 'block';
     status.style.background = 'oklch(from var(--color-accent) l c h / 0.1)';
     status.style.color = 'var(--color-accent)';
-    status.textContent = '✓ Opening email client... Please send the pre-filled message to security@identark.co.in';
+    status.textContent = '\u2713 Opening email client... Please send the pre-filled message to security@identark.co.in';
   }
   btn.disabled = false;
   btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Send & Book Assessment';
 }
 </script>
+
+<style>
+/* FOUNDING CLIENT PROGRAMME BAND */
+.founding-band {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: clamp(var(--space-12), 6vw, var(--space-20)) 0;
+}
+.founding-band__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-6);
+}
+.founding-band__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4a8fe8;
+}
+.founding-band__title {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: var(--text-2xl);
+  color: var(--color-text);
+  line-height: 1.1;
+  margin: 0;
+}
+.founding-band__desc {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  line-height: 1.65;
+  margin: 0;
+}
+.founding-band__verticals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+.founding-pill {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  background: transparent;
+  font-weight: 500;
+}
+.founding-band__cta {
+  margin-top: var(--space-2);
+}
+</style>
 </body>
 </html>
