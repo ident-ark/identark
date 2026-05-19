@@ -178,30 +178,6 @@
   </div>
 </section>
 
-<!-- STATS BAR -->
-<section class="stats" aria-label="Key metrics">
-  <div class="container">
-    <div class="stats__grid">
-      <div class="stat reveal">
-        <div class="stat__value">50M+</div>
-        <div class="stat__label">Indian SMBs needing IAM</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat__value">₹250Cr</div>
-        <div class="stat__label">Average breach cost in India</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat__value">DPDP</div>
-        <div class="stat__label">Act compliance mandatory</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat__value">72hrs</div>
-        <div class="stat__label">Breach notification window</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section id="services" class="section-padding reveal" aria-labelledby="services-heading">
   <div class="container">
@@ -772,7 +748,6 @@ async function handleFormSubmit(e) {
     }
   } catch (err) {
     console.error('Form submission error:', err);
-    // Fallback: open mailto link
     const name = form.querySelector('#name').value;
     const email = form.querySelector('#email').value;
     const company = form.querySelector('#company').value;
