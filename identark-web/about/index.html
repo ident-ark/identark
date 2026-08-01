@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About IdentArk — IAM Expertise for Indian SMBs</title>
+  <meta name="description" content="IdentArk is founded by IAM practitioners with hands-on SailPoint, Entra ID, and Okta experience. Built for India's growing SMB sector.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .page-hero {
+      min-height: 60vh;
+      padding: 120px 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      margin-bottom: 20px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .team-section {
+      padding: 120px 40px;
+      background: linear-gradient(180deg, transparent, rgba(0, 217, 255, 0.02));
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      text-align: center;
+      padding: 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 217, 255, 0.1);
+      background: rgba(22, 33, 62, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .team-member:hover {
+      border-color: var(--primary);
+      transform: translateY(-8px);
+    }
+
+    .member-avatar {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.3), rgba(255, 0, 110, 0.1));
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+    .member-name {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .member-role {
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .member-bio {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .values-section {
+      padding: 120px 40px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+
+    .value-card {
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(255, 0, 110, 0.02));
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      border-color: var(--primary);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(255, 0, 110, 0.05));
+    }
+
+    .value-icon {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .value-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-symbol">◈</span>
+        <span class="logo-text">IdentArk</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../index.html#how-it-works" class="nav-link">Process</a></li>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="../contact/index.html" class="nav-link">Contact</a></li>
+        <li><a href="#" class="nav-link cta">Book a Call</a></li>
+      </ul>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div>
+      <h1>About IdentArk</h1>
+      <p>Identity security practitioners passionate about making enterprise-grade IAM accessible to India's growing SMB ecosystem.</p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="team-section">
+    <div class="section-header fade-in" style="margin-bottom: 80px;">
+      <h2 class="section-title">Our Story</h2>
+      <p class="section-subtitle">Built by practitioners, for practitioners</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+        IdentArk was founded by a team of IAM practitioners who spent years implementing identity solutions for enterprises. We saw a pattern: Indian SMBs needed sophisticated identity security, but felt priced out of the market.
+      </p>
+      <p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+        So we built IdentArk—purpose-built for India's SMBs, with hands-on expertise in SailPoint, Microsoft Entra ID, Okta, and DPDP compliance. No consultants-by-the-hour. No bloated enterprise pricing. Just honest, expert guidance.
+      </p>
+      <p style="font-size: 16px; line-height: 1.8;">
+        Today, we've helped 100+ SMBs secure their identities, protect 50M+ accounts, and achieve compliance—all without the enterprise overhead.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="section-header fade-in" style="margin-bottom: 80px;">
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">Experienced IAM practitioners</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-member fade-in">
+        <div class="member-avatar">👨‍💼</div>
+        <h3 class="member-name">Founder & Lead</h3>
+        <p class="member-role">IAM Architect</p>
+        <p class="member-bio">15+ years in identity and access management. SailPoint Certified. Led IAM implementations for Fortune 500 companies.</p>
+      </div>
+      <div class="team-member fade-in">
+        <div class="member-avatar">👩‍💼</div>
+        <h3 class="member-name">PAM Specialist</h3>
+        <p class="member-role">Privileged Access Manager</p>
+        <p class="member-bio">Expert in CyberArk and Delinea. Specializes in securing admin accounts and privileged workflows across enterprises.</p>
+      </div>
+      <div class="team-member fade-in">
+        <div class="member-avatar">👨‍💻</div>
+        <h3 class="member-name">Compliance Lead</h3>
+        <p class="member-role">DPDP & IGA Specialist</p>
+        <p class="member-bio">DPDP consultant with deep experience in identity governance. Helps organizations map and implement compliance controls.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="section-header fade-in" style="margin-bottom: 80px;">
+      <h2 class="section-title">Our Values</h2>
+      <p class="section-subtitle">What drives us</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-in">
+        <div class="value-icon">🎯</div>
+        <h3>Simplicity First</h3>
+        <p>We strip away complexity. Identity security should be straightforward, not mystical.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">🤝</div>
+        <h3>Partnership</h3>
+        <p>We're not consultants passing through. We're partners in your security journey.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">💡</div>
+        <h3>Innovation</h3>
+        <p>We stay ahead of threats and trends. Your security matures with the landscape.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">🛡️</div>
+        <h3>Integrity</h3>
+        <p>We tell you the truth—even if it means recommending a simpler, cheaper solution.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">📈</div>
+        <h3>Growth</h3>
+        <p>We help your organization grow securely. Security scales with your business.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">🌏</div>
+        <h3>Made for India</h3>
+        <p>We understand Indian SMBs: budgets, regulations, and growth ambitions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Secure Your Identity?</h2>
+      <p>Book a free assessment with our IAM experts.</p>
+      <div class="cta-inputs">
+        <input type="email" placeholder="your@company.com" class="cta-input">
+        <button class="btn btn-primary">Schedule Call</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>IdentArk</h4>
+        <p>Identity & Access Management for India's SMBs</p>
+      </div>
+      <div class="footer-section">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="../index.html#services">IAM</a></li>
+          <li><a href="../index.html#services">PAM</a></li>
+          <li><a href="../index.html#services">IGA</a></li>
+          <li><a href="../index.html#services">DPDP</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Contact</h5>
+        <p>Email: hello@identark.com</p>
+        <p>LinkedIn: IdentArk</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 IdentArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

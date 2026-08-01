@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: 
+
+# Sitemap location
+Sitemap: https://identark.com/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries — IdentArk Identity Solutions</title>
+  <meta name="description" content="IdentArk delivers tailored IAM solutions for fintech, healthcare, e-commerce, and other key Indian industries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .page-hero {
+      min-height: 60vh;
+      padding: 120px 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      margin-bottom: 20px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .industries-section {
+      padding: 120px 40px;
+      background: linear-gradient(180deg, transparent, rgba(0, 217, 255, 0.02));
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .industry-card {
+      padding: 50px 30px;
+      background: linear-gradient(135deg, rgba(22, 33, 62, 0.5), rgba(0, 217, 255, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.1);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .industry-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .industry-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-12px);
+      box-shadow: 0 24px 48px rgba(0, 217, 255, 0.15);
+    }
+
+    .industry-card:hover::before {
+      opacity: 1;
+    }
+
+    .industry-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .industry-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: var(--text);
+    }
+
+    .industry-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .industry-challenges {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .challenge-list {
+      font-size: 13px;
+      list-style: none;
+    }
+
+    .challenge-list li {
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .challenge-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    .case-studies-section {
+      padding: 120px 40px;
+    }
+
+    .case-study {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 100px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .case-study:nth-child(even) {
+      direction: rtl;
+    }
+
+    .case-study:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .case-study-content {
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(255, 0, 110, 0.02));
+      border: 1px solid rgba(0, 217, 255, 0.15);
+      border-radius: 12px;
+    }
+
+    .case-study-badge {
+      display: inline-block;
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .case-study-content h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .case-study-content p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .metric {
+      background: rgba(0, 217, 255, 0.1);
+      padding: 15px;
+      border-radius: 6px;
+      border-left: 3px solid var(--primary);
+    }
+
+    .metric-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    .case-study-image {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(255, 0, 110, 0.05));
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .industries-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        direction: ltr;
+        margin-bottom: 60px;
+      }
+
+      .case-study:nth-child(even) {
+        direction: ltr;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-symbol">◈</span>
+        <span class="logo-text">IdentArk</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../index.html#how-it-works" class="nav-link">Process</a></li>
+        <li><a href="../about/index.html" class="nav-link">About</a></li>
+        <li><a href="../contact/index.html" class="nav-link">Contact</a></li>
+        <li><a href="#" class="nav-link cta">Book a Call</a></li>
+      </ul>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div>
+      <h1>Industry Solutions</h1>
+      <p>Tailored identity security solutions for India's fastest-growing sectors. We understand your regulatory landscape and business challenges.</p>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section class="industries-section">
+    <div class="section-header fade-in" style="margin-bottom: 80px;">
+      <h2 class="section-title">Sectors We Serve</h2>
+      <p class="section-subtitle">Purpose-built for India's economy</p>
+    </div>
+
+    <div class="industries-grid">
+      <div class="industry-card fade-in">
+        <div class="industry-icon">💰</div>
+        <h3>Fintech</h3>
+        <p>Secure your financial ecosystem with enterprise-grade IAM that meets RBI and compliance standards.</p>
+        <div class="industry-challenges">Key Challenges</div>
+        <ul class="challenge-list">
+          <li>Multi-tenant account management</li>
+          <li>Transaction authorization & audit trails</li>
+          <li>Regulatory compliance (RBI, NEFT, RTGS)</li>
+          <li>Fraud detection integration</li>
+        </ul>
+      </div>
+
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🏥</div>
+        <h3>Healthcare</h3>
+        <p>Protect patient data with HIPAA-ready identity governance and secure access controls.</p>
+        <div class="industry-challenges">Key Challenges</div>
+        <ul class="challenge-list">
+          <li>Patient data protection (HIPAA-like)</li>
+          <li>Role-based clinical access</li>
+          <li>Audit & compliance reporting</li>
+          <li>Doctor-patient confidentiality</li>
+        </ul>
+      </div>
+
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🛒</div>
+        <h3>E-commerce</h3>
+        <p>Scale your operations with consumer identity management and secure vendor access.</p>
+        <div class="industry-challenges">Key Challenges</div>
+        <ul class="challenge-list">
+          <li>Customer identity scale</li>
+          <li>Vendor & seller management</li>
+          <li>Payment gateway security</li>
+          <li>Data localization (DPDP)</li>
+        </ul>
+      </div>
+
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🏢</div>
+        <h3>Manufacturing</h3>
+        <p>Secure your supply chain with privileged access management and operational security.</p>
+        <div class="industry-challenges">Key Challenges</div>
+        <ul class="challenge-list">
+          <li>OT/IT convergence</li>
+          <li>Supplier account management</li>
+          <li>Production environment access</li>
+          <li>Regulatory compliance (NRLM, IEC)</li>
+        </ul>
+      </div>
+
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🏦</div>
+        <h3>Banking</h3>
+        <p>Enterprise-class identity governance with real-time threat detection and compliance audits.</p>
+        <div class="industry-challenges">Key Challenges</div>
+        <ul class="challenge-list">
+          <li>Regulatory compliance (RBI guidelines)</li>
+          <li>Privileged account monitoring</li>
+          <li>Real-time threat detection</li>
+          <li>Audit trail requirements</li>
+        </ul>
+      </div>
+
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🎓</div>
+        <h3>EdTech</h3>
+        <p>Protect student and educator data with COPPA-ready identity management.</p>
+        <div class="industry-challenges">Key Challenges</div>
+        <ul class="challenge-list">
+          <li>Student data privacy</li>
+          <li>Parent consent management</li>
+          <li>Teacher & staff access</li>
+          <li>Learning data security</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="case-studies-section">
+    <div class="section-header fade-in" style="margin-bottom: 80px;">
+      <h2 class="section-title">Success Stories</h2>
+      <p class="section-subtitle">How we've helped Indian SMBs scale securely</p>
+    </div>
+
+    <div class="case-study fade-in">
+      <div class="case-study-image">
+        💳
+      </div>
+      <div class="case-study-content">
+        <div class="case-study-badge">FINTECH</div>
+        <h3>Payment Processor Identity Consolidation</h3>
+        <p>A fast-growing payment processor was managing identities across 5 different systems. Customers were experiencing access delays, and compliance audits were manual nightmares.</p>
+        <p><strong>Our Solution:</strong> We implemented a centralized IAM platform with real-time provisioning, automated access reviews, and transaction audit trails.</p>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">75%</div>
+            <div class="metric-label">Onboarding Time Reduced</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Audit Ready</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">50K+</div>
+            <div class="metric-label">Identities Managed</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">4 weeks</div>
+            <div class="metric-label">Implementation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-study fade-in">
+      <div class="case-study-image">
+        🏥
+      </div>
+      <div class="case-study-content">
+        <div class="case-study-badge">HEALTHCARE</div>
+        <h3>Clinic Network Patient Data Protection</h3>
+        <p>A 50-clinic network struggled with patient data breaches and didn't have visibility into who accessed sensitive records. Data localization compliance was a nightmare.</p>
+        <p><strong>Our Solution:</strong> We deployed identity governance with role-based clinical access, real-time audit logs, and DPDP-compliant data residency controls.</p>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">Zero</div>
+            <div class="metric-label">Data Breaches Post-Implementation</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">DPDP Compliant</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">10K+</div>
+            <div class="metric-label">Patient Records Secured</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">6 weeks</div>
+            <div class="metric-label">Implementation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-study fade-in">
+      <div class="case-study-image">
+        📦
+      </div>
+      <div class="case-study-content">
+        <div class="case-study-badge">E-COMMERCE</div>
+        <h3>Multi-Vendor Seller Platform Scale</h3>
+        <p>An e-commerce platform scaling rapidly couldn't manage seller provisioning and was exposing privileged system access to too many people.</p>
+        <p><strong>Our Solution:</strong> We implemented PAM with just-in-time access, automated seller workflows, and real-time privileged session recording.</p>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">1000+</div>
+            <div class="metric-label">Sellers Onboarded Weekly</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">95%</div>
+            <div class="metric-label">Automated Provisioning</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">$2M+</div>
+            <div class="metric-label">GMV Annually</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">5 weeks</div>
+            <div class="metric-label">Implementation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Is Your Industry Covered?</h2>
+      <p>Get a free consultation. We'll show you how IdentArk fits your specific industry challenges.</p>
+      <button class="btn btn-primary">Book Your Industry Consultation</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>IdentArk</h4>
+        <p>Identity & Access Management for India's SMBs</p>
+      </div>
+      <div class="footer-section">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="../index.html#services">IAM</a></li>
+          <li><a href="../index.html#services">PAM</a></li>
+          <li><a href="../index.html#services">IGA</a></li>
+          <li><a href="../index.html#services">DPDP</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="../contact/index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Contact</h5>
+        <p>Email: hello@identark.com</p>
+        <p>LinkedIn: IdentArk</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 IdentArk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
