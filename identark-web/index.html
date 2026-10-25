@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IdentArk — IAM & Identity Security for Indian SMBs</title>
-  <meta name="description" content="Enterprise-grade IAM, PAM, and Identity Governance solutions for India's growing SMB ecosystem. Purpose-built, minimal overhead.">
+  <meta name="description" content="IdentArk is India's boutique IAM consultancy helping SMBs implement Identity & Access Management, Privileged Access Management, Identity Governance, and DPDP compliance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,15 +17,17 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="navbar-container">
-      <div class="logo">
-        <span class="logo-symbol">◈</span>
+      <a href="./" class="logo" aria-label="IdentArk home">
+        <img src="logo.jpeg" alt="" class="logo-image" width="44" height="44">
         <span class="logo-text">IdentArk</span>
-      </div>
+      </a>
       <ul class="nav-menu">
         <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#industries" class="nav-link">Industries</a></li>
         <li><a href="#how-it-works" class="nav-link">Process</a></li>
-        <li><a href="/contact/" class="nav-link">Contact</a></li>
-        <li><a href="/contact/" class="nav-link cta">Book a Call</a></li>
+        <li><a href="about/" class="nav-link">About</a></li>
+        <li><a href="contact/" class="nav-link">Contact</a></li>
+        <li><a href="contact/" class="nav-link cta">Book a Call</a></li>
       </ul>
       <button class="hamburger">
         <span></span>
@@ -38,7 +40,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-label">Identity Security Platform</div>
+      <div class="hero-label">India's Boutique IAM Partner</div>
       <h1 class="hero-title">
         <span class="word">Secure</span>
         <span class="word">Identity.</span>
@@ -48,11 +50,11 @@
         <span class="word">Stay Compliant.</span>
       </h1>
       <p class="hero-description">
-        Enterprise-grade IAM, PAM, and Identity Governance for India's SMBs—without the enterprise price tag.
+        IdentArk delivers enterprise-grade IAM, PAM, and Identity Governance to India's SMBs — without the enterprise price tag or the consultant-by-the-hour model.
       </p>
       <div class="hero-ctas">
-        <button class="btn btn-primary">Get Started</button>
-        <button class="btn btn-secondary">Learn More</button>
+        <a href="contact/" class="btn btn-primary">Book a Free Assessment</a>
+        <a href="#services" class="btn btn-secondary">Explore Services</a>
       </div>
     </div>
     <div class="floating-cards">
@@ -71,29 +73,58 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🔐</div>
-        <h3>Identity & Access Management</h3>
-        <p>Centralize user identity, streamline provisioning, and enforce granular access policies across your organization.</p>
+        <h3>Identity &amp; Access Management (IAM)</h3>
+        <p>Manage joiners, movers, and leavers with automated provisioning across Active Directory, SaaS, and on-prem apps using SailPoint IIQ, Entra ID, or Okta.</p>
         <span class="service-tag">IAM</span>
       </div>
       <div class="service-card">
         <div class="service-icon">🛡️</div>
         <h3>Privileged Access Management</h3>
-        <p>Secure, monitor, and audit privileged accounts with real-time threat detection and automated response.</p>
+        <p>Vault admin credentials, record privileged sessions, and enforce just-in-time access with CyberArk and open-source PAM options for SMB budgets.</p>
         <span class="service-tag">PAM</span>
       </div>
       <div class="service-card">
         <div class="service-icon">🎯</div>
-        <h3>Identity Governance</h3>
-        <p>Establish role-based access controls, manage certifications, and ensure compliance with regulatory requirements.</p>
+        <h3>Identity Governance &amp; Administration (IGA)</h3>
+        <p>Engineer roles, certify access, and enforce separation-of-duties policies. Replace manual reviews with automated governance cycles that satisfy auditors.</p>
         <span class="service-tag">IGA</span>
       </div>
       <div class="service-card">
         <div class="service-icon">✓</div>
-        <h3>DPDP Readiness</h3>
-        <p>Navigate India's Digital Personal Data Protection Act with our specialized compliance consultation and implementation.</p>
+        <h3>DPDP Act Readiness</h3>
+        <p>Map identity controls to India's Digital Personal Data Protection Act, including data access, consent-linked processing, and auditable response workflows.</p>
         <span class="service-tag">COMPLIANCE</span>
       </div>
+      <div class="service-card">
+        <div class="service-icon">🔗</div>
+        <h3>SSO &amp; Federation</h3>
+        <p>Integrate applications with SAML 2.0, OAuth 2.0, and OIDC. Simplify sign-in, enforce MFA, and reduce password sprawl.</p>
+        <span class="service-tag">SSO</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">☁️</div>
+        <h3>Cloud IAM Migration</h3>
+        <p>Move from on-prem Active Directory or legacy IDM to Entra ID, SailPoint Cloud, or Okta with parallel-run migrations designed to avoid identity downtime.</p>
+        <span class="service-tag">CLOUD</span>
+      </div>
     </div>
+  </section>
+
+  <!-- Industry Solutions -->
+  <section id="industries" class="services">
+    <div class="section-header fade-in">
+      <h2 class="section-title">India's SMB Sector,<br>Secured by Design</h2>
+      <p class="section-subtitle">Playbooks tailored to each industry's compliance baseline and threat model.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🏦</div><h3>BFSI &amp; Fintech</h3><p>RBI IT Framework, SEBI CSCRF, and DPDP-aligned controls, privileged access over core banking, and maker-checker workflows.</p><span class="service-tag">BFSI</span></div>
+      <div class="service-card"><div class="service-icon">🏥</div><h3>Healthcare</h3><p>DPDP health-data classification, role-based access to patient records, and audit trails for clinical staff.</p><span class="service-tag">HEALTHCARE</span></div>
+      <div class="service-card"><div class="service-icon">📚</div><h3>EdTech</h3><p>Student and staff identity lifecycle, secure learning-platform access, and DPDP compliance for institutions handling minors' data.</p><span class="service-tag">EDTECH</span></div>
+      <div class="service-card"><div class="service-icon">💻</div><h3>IT &amp; SaaS</h3><p>Developer identity governance, production access controls, and automated provisioning into GitHub, Jira, AWS, and Azure.</p><span class="service-tag">TECHNOLOGY</span></div>
+      <div class="service-card"><div class="service-icon">🏙️</div><h3>GIFT City &amp; IFSCs</h3><p>IFSCA-ready identity frameworks, cross-border federation, and regulatory audit-readiness for financial services firms.</p><span class="service-tag">GIFT CITY</span></div>
+      <div class="service-card"><div class="service-icon">🏭</div><h3>Manufacturing</h3><p>OT/IT identity convergence, vendor and contractor access management, and shop-floor privileged access controls.</p><span class="service-tag">INDUSTRY</span></div>
+    </div>
+    <p style="text-align:center;margin-top:32px;"><a href="industries/" class="btn btn-secondary">Explore Industry Solutions</a></p>
   </section>
 
   <!-- How It Works -->
@@ -105,23 +136,23 @@
     <div class="process-timeline">
       <div class="process-step">
         <div class="step-number">01</div>
-        <h3>Assessment</h3>
-        <p>Deep dive into your current IAM posture, identify gaps, and map security requirements.</p>
+        <h3>Discovery &amp; Assessment</h3>
+        <p>Map applications, access paths, and identity stores, then produce a prioritised risk report and clear delivery roadmap.</p>
       </div>
       <div class="process-step">
         <div class="step-number">02</div>
-        <h3>Strategy</h3>
-        <p>Develop a tailored roadmap aligned with your business goals and compliance needs.</p>
+        <h3>Design &amp; Architecture</h3>
+        <p>Agree platform selection, architecture, and connector design with stakeholders before implementation begins.</p>
       </div>
       <div class="process-step">
         <div class="step-number">03</div>
-        <h3>Implementation</h3>
-        <p>Execute the plan with minimal disruption, hands-on delivery by IAM practitioners.</p>
+        <h3>Build &amp; Configure</h3>
+        <p>Implement lifecycle workflows, role models, PAM vaults, SSO integrations, and access certifications; test in staging before production cutover.</p>
       </div>
       <div class="process-step">
         <div class="step-number">04</div>
-        <h3>Optimization</h3>
-        <p>Continuous monitoring, tuning, and support to ensure long-term success.</p>
+        <h3>Handover &amp; Support</h3>
+        <p>Receive documentation, administrator training, and hypercare, with ongoing managed services available after launch.</p>
       </div>
     </div>
   </section>
@@ -137,22 +168,39 @@
       <div class="stat-label">Identities Managed</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">99.9%</div>
-      <div class="stat-label">Uptime</div>
+      <div class="stat-number">4</div>
+      <div class="stat-label">Delivery Phases</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">24/7</div>
-      <div class="stat-label">Support</div>
+      <div class="stat-number">4</div>
+      <div class="stat-label">DPDP Readiness Steps</div>
+    </div>
+  </section>
+
+  <!-- DPDP Readiness -->
+  <section id="dpdp" class="how-it-works">
+    <div class="section-header fade-in">
+      <h2 class="section-title">India's Data Privacy Law<br>Starts with Identity</h2>
+      <p class="section-subtitle">Make DPDP requirements operational through clear identity and access controls.</p>
+    </div>
+    <div style="max-width:900px;margin:0 auto 48px;text-align:center;">
+      <p>The Digital Personal Data Protection Act 2023 sets obligations for how organisations collect, process, and store personal data. IdentArk maps identity architecture to purpose limitation, data principal rights, consent management, and breach notification — connecting each requirement to who can access which data and when.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step"><div class="step-number">01</div><h3>Data Minimisation</h3><p>Scope access to the minimum necessary data and enforce role-based controls at the identity layer.</p></div>
+      <div class="process-step"><div class="step-number">02</div><h3>Consent Linkage</h3><p>Connect identity and access workflows to valid consent context for personal-data processing.</p></div>
+      <div class="process-step"><div class="step-number">03</div><h3>Right to Erasure</h3><p>Use deprovisioning workflows to support consent withdrawal and data-deletion requests.</p></div>
+      <div class="process-step"><div class="step-number">04</div><h3>Breach Readiness</h3><p>Maintain identity audit trails that help establish access history during incident response.</p></div>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section id="contact" class="cta-section">
     <div class="cta-content">
-      <h2>Ready to Secure Your Identity?</h2>
-      <p>Book a free assessment with our IAM experts. No obligation, just honest consultation.</p>
+        <h2>Start with a Free Identity Assessment</h2>
+        <p>Tell us about your environment. We'll map the gaps, prioritise the risks, and show you what a fix looks like — no commitment required.</p>
       <div class="cta-inputs">
-          <a href="/contact/" class="btn btn-primary" style="display:inline-block;text-align:center;text-decoration:none;">Schedule Call</a>
+          <a href="contact/" class="btn btn-primary" style="display:inline-block;text-align:center;text-decoration:none;">Book a Free Assessment</a>
       </div>
     </div>
   </section>
@@ -162,7 +210,7 @@
     <div class="footer-content">
       <div class="footer-section">
         <h4>IdentArk</h4>
-        <p>Identity & Access Management for India's SMBs</p>
+        <p>India's boutique IAM consultancy. Identity security, governance, and DPDP compliance for growing businesses.</p>
       </div>
       <div class="footer-section">
         <h5>Services</h5>
@@ -170,25 +218,25 @@
           <li><a href="#services">IAM</a></li>
           <li><a href="#services">PAM</a></li>
           <li><a href="#services">IGA</a></li>
-          <li><a href="#services">DPDP</a></li>
+          <li><a href="#dpdp">DPDP</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h5>Company</h5>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="about/">About</a></li>
+          <li><a href="industries/">Industries</a></li>
+          <li><a href="contact/">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h5>Contact</h5>
         <p>Email: <a href="mailto:security@identark.co.in" style="color:var(--primary);">security@identark.co.in</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/company/116654145/" target="_blank" style="color:var(--primary);">IdentArk</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/company/116654145/" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">IdentArk</a></p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 IdentArk. All rights reserved.</p>
+      <p>&copy; 2026 IdentArk. All rights reserved.</p>
     </div>
   </footer>
 

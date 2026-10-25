@@ -329,7 +329,7 @@ function setupFormInteractions() {
     '.cta-section .btn-primary'
   );
 
-  if (scheduleBtn) {
+  if (scheduleBtn && emailInput && scheduleBtn.tagName === 'BUTTON') {
     scheduleBtn.addEventListener('click', () => {
       if (emailInput && emailInput.value) {
         alert(
